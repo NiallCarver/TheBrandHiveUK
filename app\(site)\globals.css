@@ -1,0 +1,30 @@
+@import "../../styles/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+[data-motion="off"] * { scroll-behavior: auto !important; }
+[data-motion="off"] .btn:hover, [data-motion="off"] .btn:active { transform: none !important; transition: none !important; }
+
+.container {
+  @apply max-w-container mx-auto px-5;
+}
+.section {
+  @apply py-16 md:py-24;
+}
+.h1 { @apply text-6xl md:text-7xl font-semibold tracking-tight; }
+.h2 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+.h3 { @apply text-xl md:text-2xl font-medium; }
+.p { @apply text-base leading-7 text-muted-foreground; }
+.btn {
+  @apply inline-flex items-center gap-2 rounded-2xl px-8 md:px-10 py-4 text-base md:text-lg bg-primary text-primary-foreground shadow-brand transition-transform;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.link { @apply underline decoration-transparent underline-offset-4 hover:decoration-primary;}
+.header-blur {
+  backdrop-filter: saturate(180%) blur(10px);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+}
+.card {@apply bg-card border border-border rounded-2xl p-6;}
