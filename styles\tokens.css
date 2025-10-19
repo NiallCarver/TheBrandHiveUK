@@ -1,0 +1,13 @@
+:root{
+  --bg:#0B0B0F; --fg:#FFFFFF; --card:#111318; --muted:#0F1116;
+  --muted-foreground:#B5B7C0; --border:#2A2D37; --ring:#2A2D37;
+  --primary:#F5C542; --primary-foreground:#0B0B0F;
+  --secondary:#111318; --secondary-foreground:#E6E6EA;
+  --accent:#FFD34D; --accent-foreground:#0B0B0F;
+  --success:#30D158; --warn:#FFD60A; --error:#FF453A;
+}
+@media (prefers-color-scheme: dark){
+  :root{ /* stays dark-first */ }
+}
+html { background: var(--bg); color: var(--fg); }
+* { scroll-behavior: smooth; }
