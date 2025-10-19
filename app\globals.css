@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Focus ring for keyboard users */
+:focus-visible {
+  @apply outline-none ring-2 ring-accent/60 ring-offset-2 ring-offset-background;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Container utility */
+.container-slim { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+/* Card utility */
+.card { @apply bg-card/80 backdrop-blur supports-[backdrop-filter]:bg-card/70 border border-white/5 rounded-xl shadow-glow; }
+
+/* Optional subtle yellow glow helpers */
+.text-glow { text-shadow: 0 0 12px rgba(250,204,21,0.07), 0 0 32px rgba(250,204,21,0.10); }
+.text-glow:hover { text-shadow: 0 0 18px rgba(250,204,21,0.10), 0 0 48px rgba(250,204,21,0.14); }
+.ui-glow { box-shadow: 0 0 16px rgba(250,204,21,0.05); }
+.ui-glow:hover { box-shadow: 0 0 28px rgba(250,204,21,0.08); }
+
+/* Logos marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track { display: flex; gap: 12px; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-mask { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
