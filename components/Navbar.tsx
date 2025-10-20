@@ -1,6 +1,5 @@
 "use client"
 import Link from 'next/link'
-import Logo from '@/components/ui/Logo'
 import { useEffect, useState } from 'react'
 
 export default function Navbar() {
@@ -13,19 +12,14 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-40 transition-all ${scrolled ? 'backdrop-blur bg-background/60 border-b border-white/5' : 'bg-transparent'}`}>
+    <header className={"fixed top-0 inset-x-0 z-40 transition-all " + (scrolled ? 'backdrop-blur bg-background/60 border-b border-white/5' : 'bg-transparent')}>
       <nav className="container-slim flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md px-1">
-          <Logo
-            alt="BrandHive"
-            className="h-10 sm:h-12 w-auto object-contain border border-white/20 ring-2 ring-white/80 ring-offset-2 ring-offset-background shadow-[0_0_36px_rgba(245,197,66,0.18)]"
-          />
-          <span className="text-sm font-semibold tracking-wide">BrandHive</span>
+        <Link href="/" className="flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md px-1">
+          <span className="text-base font-semibold tracking-wide">The Brand Hive</span>
         </Link>
         <div className="flex items-center gap-6 text-sm">
           <Link href="/" className="hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded">Home</Link>
           <Link href="/process" className="hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded">Process</Link>
-          <Link href="/insight-hive" className="hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded">Insight Hive</Link>
           <Link href="/book" className="hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded">Book</Link>
           <Link href="/contact" className="hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded">Contact</Link>
         </div>
@@ -33,4 +27,3 @@ export default function Navbar() {
     </header>
   )
 }
-
