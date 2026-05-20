@@ -3,7 +3,7 @@ import Section from '@/components/ui/Section'
 export default function Differentiators(){
   const items = [
     'Specialists, not generalists',
-    'Proven data‑driven frameworks',
+    'Proven data-driven frameworks',
     'Proprietary Authority Architecture system',
     'Transparent results and reporting',
   ]
@@ -20,4 +20,5 @@ export default function Differentiators(){
     </Section>
   )
 }
+
 

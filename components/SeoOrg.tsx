@@ -4,7 +4,7 @@ export default function SeoOrg(){
     '@type': 'Organization',
     name: 'Brand Hive UK',
     url: 'https://brandhive.uk',
-    logo: 'https://brandhive.uk/brandhive-logo.svg',
+    logo: 'https://brandhive.uk/logos/The_Brand_Hive_UK_Transparent.png',
     sameAs: ['https://x.com/', 'https://www.linkedin.com/'],
   }
   const website = {
@@ -25,4 +25,6 @@ export default function SeoOrg(){
     </>
   )
 }
+
+
 

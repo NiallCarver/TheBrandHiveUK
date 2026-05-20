@@ -1,22 +1,143 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Infographic from "@/components/ui/Infographic";
 
-type Step = { n: number; title: string; body: string };
+type Step = { n: number; title: string; body: string; bullets?: string[] };
 
 const steps: Step[] = [
-  { n: 1, title: "Research & Intel Sweep", body: "Market, audience, objections, and competitor language mapped to uncover whitespace and high‑leverage narratives." },
-  { n: 2, title: "Signal Mining", body: "Collect proof assets, case studies, press, and authority markers to anchor all messaging with credibility." },
-  { n: 3, title: "Amplifyr Blueprint", body: "Our intelligence layer defines ICPs, motivators, positioning angles, and proof order—your operating thesis." },
-  { n: 4, title: "Voice Architecture", body: "Strategic Messaging Bridge + Archetype Matrix shape phrasing, cadence, and stance so it reads unmistakably like you." },
-  { n: 5, title: "Brand Hive Matrix", body: "Narrative × Channel × Proof mapping so each touchpoint compounds belief and moves people toward intent." },
-  { n: 6, title: "System Design", body: "Operating system across LinkedIn, X, PR, and lead gen. Map reach → relevance → conversion pathways." },
-  { n: 7, title: "3‑Step Community", body: "Reach → resonance → relationships. Rituals and formats that earn attention and convert attention into pipeline." },
-  { n: 8, title: "Creative Engine", body: "Hooks, angles, and formats tuned per channel. Templates for speed without sacrificing originality." },
-  { n: 9, title: "Specialist Execution", body: "Niche experts across social growth, PR, copy, and paid run their craft to a global standard." },
-  { n: 10, title: "Measurement Layer", body: "Track engagement velocity, response quality, booked calls, and press hits—signal over vanity counts." },
-  { n: 11, title: "Optimization Loops", body: "Weekly reviews refine tone, cadence, and topic selection. Compounds reach, trust, and revenue predictably." },
-  { n: 12, title: "Authority & Scale", body: "Expand PR and thought leadership. Cement category leadership with repeatable, evidence‑backed storytelling." },
+  {
+    n: 1,
+    title: "Research & Intelligence Sweep",
+    body:
+      "We interrogate markets, audience vernacular, and competitor frames to expose narrative whitespace and decision-making triggers. The outcome is a reality map—not opinions—that directs every subsequent move.",
+    bullets: [
+      "Audience linguistics and objection mining",
+      "Competitor narrative decomposition",
+      "Category power-dynamics and whitespace"
+    ],
+  },
+  {
+    n: 2,
+    title: "Signal Mining",
+    body:
+      "We assemble proof at depth—press, case studies, outcomes, testimonials—and order them by persuasion weight. This converts social attention into trust without theatrics.",
+    bullets: [
+      "Proof inventory and credibility hierarchy",
+      "Case study structure and quotable assets",
+      "Press angles and authority anchors"
+    ],
+  },
+  {
+    n: 3,
+    title: "Amplifyr Blueprint",
+    body:
+      "Our intelligence layer defines ICPs, motivational drivers, positioning vectors, and proof order. It becomes the operating thesis for brand, content, and distribution.",
+    bullets: [
+      "ICP segmentation and pain-language",
+      "Positioning vectors and category stance",
+      "Proof cadence and CTA architecture"
+    ],
+  },
+  {
+    n: 4,
+    title: "Voice Architecture",
+    body:
+      "We engineer a voice that reads unmistakably like leadership—structured for recall, respect, and response. Phrasing, rhythm, and stance are codified for speed and fidelity.",
+    bullets: [
+      "Messaging bridge and stance calibration",
+      "Archetype alignment and cadence rules",
+      "Editorial guardrails and exemplars"
+    ],
+  },
+  {
+    n: 5,
+    title: "Brand Hive Matrix",
+    body:
+      "Narrative — Channel — Proof mapping ensures each touchpoint compounds belief. Distribution is designed, not hoped for.",
+    bullets: [
+      "Message mapping per surface",
+      "Proof placement and friction removal",
+      "Discovery mechanics and recirculation"
+    ],
+  },
+  {
+    n: 6,
+    title: "System Design",
+    body:
+      "We build an operating system across LinkedIn, X, PR, and lead gen that converts attention into pipeline. The system scales without diluting voice.",
+    bullets: [
+      "Weekly cadences and content pillars",
+      "Engagement workflows and distribution",
+      "Conversion paths and offer sequencing"
+    ],
+  },
+  {
+    n: 7,
+    title: "3‑Step Community",
+    body:
+      "Reach → resonance → relationships. We operationalize rituals that earn attention, build affinity, and open qualified conversations at will.",
+    bullets: [
+      "Surface area expansion without spam",
+      "Signal-led interaction rituals",
+      "DM frameworks and call creation"
+    ],
+  },
+  {
+    n: 8,
+    title: "Creative Engine",
+    body:
+      "Hooks and formats are tuned to platform physics. We ship original work at pace—structured for saves, replies, and downstream revenue, not vanity graphs.",
+    bullets: [
+      "Hook libraries and angle packs",
+      "Format templates for speed",
+      "Editorial QA and variance checks"
+    ],
+  },
+  {
+    n: 9,
+    title: "Specialist Execution",
+    body:
+      "Niche experts run the stack—social growth, PR, copy, paid—under a shared standard. This is craftsmanship at scale.",
+    bullets: [
+      "Role clarity and baton passes",
+      "Review rhythms and escalation",
+      "Quality gates per discipline"
+    ],
+  },
+  {
+    n: 10,
+    title: "Measurement Layer",
+    body:
+      "We track leading indicators that predict revenue: response quality, saves velocity, profile intent, press momentum, booked calls. Reporting reads like strategy, not a dashboard dump.",
+    bullets: [
+      "Leading vs. lagging indicator set",
+      "Insight memos and decision logs",
+      "Attribution sanity, not theater"
+    ],
+  },
+  {
+    n: 11,
+    title: "Optimization Loops",
+    body:
+      "Weekly reviews tighten narrative, cadence, and offer order. Compounding reach and trust are engineered, not accidental.",
+    bullets: [
+      "Topic pruning and angle deepening",
+      "Cadence and CTA experiments",
+      "Proof stacking and recency bias"
+    ],
+  },
+  {
+    n: 12,
+    title: "Authority & Scale",
+    body:
+      "We expand PR and thought leadership, institutionalize voice, and cement category leadership. The compounding machine becomes a moat.",
+    bullets: [
+      "Executive platform development",
+      "Partner distribution and co‑creation",
+      "Playbook hardening and training"
+    ],
+  },
 ];
 
 export default function ProcessDetailed() {
@@ -40,15 +161,9 @@ export default function ProcessDetailed() {
   return (
     <section className="py-16">
       <div className="container-slim">
-        <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Brand Hive UK Process</h1>
-            <p className="text-sm text-muted-foreground mt-2">Where structure meets storytelling—and every decision is evidence‑driven.</p>
-          </div>
-          <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
-            <span className="inline-flex h-6 items-center rounded-full border border-white/10 bg-white/5 px-2">Drag ▸</span>
-            <span className="inline-flex h-6 items-center rounded-full border border-white/10 bg-white/5 px-2">← / →</span>
-          </div>
+        <div className="mb-6">
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Brand Hive UK Process</h1>
+          <p className="text-sm text-muted-foreground mt-2">Where structure meets storytelling — and every decision is evidence-driven.</p>
         </div>
 
         {/* Desktop grid */}
@@ -72,8 +187,15 @@ export default function ProcessDetailed() {
               <div className="text-accent text-xs font-semibold tracking-wider">{String(s.n).padStart(2,'0')}</div>
               <h3 className="mt-1 text-lg font-medium">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+              {s.bullets && s.bullets.length ? (
+                <ul className="mt-3 text-xs text-muted-foreground space-y-1 list-disc pl-5">
+                  {s.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              ) : null}
               <div className="mt-4 h-24 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center text-[11px] text-muted-foreground">
-                Interactive diagram placeholder
+                <Infographic kind={i} />
               </div>
             </motion.div>
           ))}
@@ -95,6 +217,16 @@ export default function ProcessDetailed() {
                   <div className="text-accent text-xs font-semibold tracking-wider">{String(s.n).padStart(2,'0')}</div>
                   <h3 className="mt-1 text-base font-medium">{s.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+                  {s.bullets && s.bullets.length ? (
+                    <ul className="mt-3 text-[11px] text-muted-foreground space-y-1 list-disc pl-5">
+                      {s.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                  <div className="mt-3 h-20 rounded-lg border border-white/10 bg-white/5 flex items-center justify-center">
+                    <Infographic kind={i} />
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -104,4 +236,3 @@ export default function ProcessDetailed() {
     </section>
   );
 }
-

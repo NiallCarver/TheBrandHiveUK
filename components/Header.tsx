@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import CTAButton from "./ui/CTAButton";
+import Logo from "./ui/Logo";
 
 export default function Header(){
   const [scrolled, setScrolled] = useState(false);
@@ -15,11 +16,9 @@ export default function Header(){
     <header className={`fixed top-0 left-0 right-0 z-50 ${scrolled ? "header-blur border-b border-border" : ""}`}>
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-3 font-medium">
-          <img
-            src="/logos/brand-logo.png"
+          <Logo
+            className="h-10 sm:h-12 w-auto object-contain border border-white/20 ring-2 ring-white/80 ring-offset-2 ring-offset-background shadow-[0_0_36px_rgba(245,197,66,0.18)]"
             alt="BrandHive"
-            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border border-white/20 ring-2 ring-white/80 ring-offset-2 ring-offset-background shadow-[0_0_36px_rgba(245,197,66,0.35),0_0_80px_rgba(245,197,66,0.20)]"
-            style={{ filter: 'brightness(1.15) contrast(1.12)' }}
           />
           <span>The Brand Hive UK</span>
         </Link>
@@ -35,3 +34,4 @@ export default function Header(){
     </header>
   );
 }
+

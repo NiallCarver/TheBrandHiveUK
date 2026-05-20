@@ -14,7 +14,7 @@ export default function ServiceCaseStudy({ title, summary, stats }: { title: str
         <motion.div {...(enabled ? { variants:fadeUp } : {})} className="card md:col-span-3">
           <h3 className="h2">{title}</h3>
           <p className="p mt-3">{summary}</p>
-          <div className="mt-4 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-muted grid place-items-center">
+          <div className="mt-4 aspect-video w-full overflow-hidden rounded-2xl border border-border bg-white/5 grid place-items-center">
             <span className="text-sm text-muted-foreground">Image/Video placeholder</span>
           </div>
         </motion.div>

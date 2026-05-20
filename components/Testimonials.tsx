@@ -1,6 +1,7 @@
 "use client"
 import Reveal from '@/components/Reveal'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { useCallback } from 'react'
 
 type Testimonial = {
   quote: string
@@ -32,7 +33,7 @@ const testimonials: Testimonial[] = [
   // Right
   {
     quote:
-      'I engaged Niall about a year ago. Since then, my followers, engagement, community, and revenue have all increased. Highly recommended.',
+      'I engaged with Niall and his team about a year ago. Since then, my followers, engagement, community, and revenue have all increased. Highly recommended.',
     name: 'Randy Waldrum',
     role: 'National Soccer Coach',
     img: '/people/randy-waldrum.webp',
@@ -51,6 +52,18 @@ function Initials({ name }: { name: string }) {
 }
 
 export default function Testimonials() {
+  const rx = useMotionValue(0), ry = useMotionValue(0)
+  const rotateX = useTransform(ry, [-20,20], [6,-6])
+  const rotateY = useTransform(rx, [-20,20], [-6,6])
+  const onMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    const r = (e.currentTarget as HTMLElement).getBoundingClientRect()
+    const dx = (e.clientX - (r.left + r.width/2)) / (r.width/2)
+    const dy = (e.clientY - (r.top + r.height/2)) / (r.height/2)
+    rx.set(Math.max(-20, Math.min(20, dx*20)))
+    ry.set(Math.max(-20, Math.min(20, dy*20)))
+  }, [rx, ry])
+  const onLeave = useCallback(() => { rx.set(0); ry.set(0); }, [rx, ry])
+
   return (
     <section aria-label="Testimonials" className="py-16">
       <div className="container-slim grid md:grid-cols-3 gap-4">
@@ -60,7 +73,10 @@ export default function Testimonials() {
               initial="rest"
               whileHover="hover"
               animate="rest"
-              className="card p-5 h-full relative"
+              onMouseMove={onMove}
+              onMouseLeave={onLeave}
+              style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+              className="card p-5 h-full relative group"
             >
               {/* Header with avatar */}
               <div className="flex items-center gap-3">
@@ -107,6 +123,9 @@ export default function Testimonials() {
                   />
                 ))}
               </motion.div>
+
+              {/* Soft depth glow */}
+              <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ boxShadow: '0 30px 80px rgba(245,197,66,0.08), inset 0 0 0 1px rgba(255,255,255,0.05)' }} />
             </motion.figure>
           </Reveal>
         ))}

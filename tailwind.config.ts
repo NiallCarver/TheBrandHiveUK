@@ -9,32 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#0B0B0F',
-        foreground: '#FFFFFF',
-        card: '#111318',
-        border: '#2A2D37',
-        ring: '#2A2D37',
-        primary: '#F5C542',
-        'primary-foreground': '#0B0B0F',
-        secondary: '#111318',
-        'secondary-foreground': '#E6E6EA',
-        accent: '#FFD34D',
-        'accent-foreground': '#0B0B0F',
-        muted: '#9CA3AF',
-        'muted-foreground': '#B5B7C0',
-        success: '#30D158',
-        warn: '#FFD60A',
-        error: '#FF453A'
+        background: 'rgb(11 11 15 / <alpha-value>)',
+        foreground: 'rgb(255 255 255 / <alpha-value>)',
+        card: 'rgb(17 19 24 / <alpha-value>)',
+        border: 'rgb(42 45 55 / <alpha-value>)',
+        ring: 'rgb(42 45 55 / <alpha-value>)',
+        primary: 'rgb(245 197 66 / <alpha-value>)',
+        'primary-foreground': 'rgb(11 11 15 / <alpha-value>)',
+        secondary: 'rgb(17 19 24 / <alpha-value>)',
+        'secondary-foreground': 'rgb(230 230 234 / <alpha-value>)',
+        accent: 'rgb(255 211 77 / <alpha-value>)',
+        'accent-foreground': 'rgb(11 11 15 / <alpha-value>)',
+        muted: 'rgb(156 163 175 / <alpha-value>)',
+        'muted-foreground': 'rgb(181 183 192 / <alpha-value>)',
+        success: 'rgb(48 209 88 / <alpha-value>)',
+        warn: 'rgb(255 214 10 / <alpha-value>)',
+        error: 'rgb(255 69 58 / <alpha-value>)'
       },
       maxWidth: {
-        container: '72rem'
+        container: '80rem'
       },
       borderRadius: {
         xl: '1rem'
       },
       boxShadow: {
-        brand: '0 18px 60px rgba(245,197,66,0.16)',
-        glow: '0 0 0 1px rgba(255,255,255,0.04), 0 0 12px rgba(245,197,66,0.05)'
+        glow: '0 0 0 1px rgba(255,255,255,0.04), 0 0 12px rgba(94,234,212,0.05)',
+        brand: '0 10px 30px rgba(245,197,66,0.16)'
       }
     }
   },

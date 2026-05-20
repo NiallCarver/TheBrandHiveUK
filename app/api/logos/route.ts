@@ -7,7 +7,7 @@ export async function GET() {
     const dir = path.join(process.cwd(), 'public', 'logos')
     const entries = await readdir(dir, { withFileTypes: true })
     const exts = new Set(['.png', '.jpg', '.jpeg', '.svg', '.webp', '.avif'])
-    const exclude = new Set(['brand-logo.png'])
+    const exclude = new Set(['brand-logo.png', 'the_brand_hive_uk_transparent.png'])
     const files = entries
       .filter((e) => e.isFile())
       .map((e) => e.name)

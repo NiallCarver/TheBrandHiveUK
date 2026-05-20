@@ -53,7 +53,7 @@ export default function Engagement(){
                 <div className="text-3xl font-semibold tracking-tight">{m.value}</div>
                 <div className="text-base text-muted-foreground">{m.unit}</div>
               </div>
-              <div className="mt-3 text-[11px] text-muted-foreground">Last 9 intervals</div>
+              {/* interval label removed for cleaner UI */}
               <div className="mt-2 text-accent">
                 <Sparkline points={m.trend} />
               </div>
