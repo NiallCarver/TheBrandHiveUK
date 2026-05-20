@@ -1,0 +1,12 @@
+[
+  { "name": "Forbes", "src": "/logos/Forbes.jpg", "visible": true, "order": 1 },
+  { "name": "Bloomberg", "src": "/logos/Bloomberg.png", "visible": true, "order": 2 },
+  { "name": "Yahoo Finance", "src": "/logos/yahoo finance.jpg", "visible": true, "order": 3 },
+  { "name": "MarketWatch", "src": "/logos/Market Watch.png", "visible": true, "order": 4 },
+  { "name": "Entrepreneur", "src": "/logos/entrepreneur.jpg", "visible": true, "order": 5 },
+  { "name": "AP News", "src": "/logos/AP News.png", "visible": true, "order": 6 },
+  { "name": "Benzinga", "src": "/logos/Benzinga.png", "visible": false, "order": 7 },
+  { "name": "HackerNoon", "src": "/logos/hackernoon.jpg", "visible": false, "order": 8 },
+  { "name": "STASIS", "src": "/logos/STASIS.png", "visible": false, "order": 9 }
+]
+

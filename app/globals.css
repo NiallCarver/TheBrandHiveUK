@@ -1,0 +1,56 @@
+@import "../styles/tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+[data-motion="off"] * { scroll-behavior: auto !important; }
+[data-motion="off"] .btn:hover, [data-motion="off"] .btn:active { transform: none !important; transition: none !important; }
+
+html, body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Focus ring for keyboard users */
+:focus-visible {
+  @apply outline-none ring-2 ring-accent/60 ring-offset-2 ring-offset-background;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+.container { @apply max-w-container mx-auto px-5; }
+
+/* Container utility */
+.container-slim { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+.section { @apply py-16 md:py-24; }
+.h1 { @apply text-6xl md:text-7xl font-semibold tracking-tight; }
+.h2 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+.h3 { @apply text-xl md:text-2xl font-medium; }
+.p { @apply text-base leading-7 text-muted-foreground; }
+.btn { @apply inline-flex items-center gap-2 rounded-2xl px-8 md:px-10 py-4 text-base md:text-lg bg-primary text-primary-foreground shadow-brand transition-transform; }
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.link { @apply underline decoration-transparent underline-offset-4 hover:decoration-primary; }
+.header-blur {
+  backdrop-filter: saturate(180%) blur(10px);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+}
+
+/* Card utility */
+.card { @apply bg-card border border-border rounded-2xl p-6; }
+
+/* Optional subtle yellow glow helpers */
+.text-glow { text-shadow: 0 0 12px rgba(250,204,21,0.07), 0 0 32px rgba(250,204,21,0.10); }
+.text-glow:hover { text-shadow: 0 0 18px rgba(250,204,21,0.10), 0 0 48px rgba(250,204,21,0.14); }
+.ui-glow { box-shadow: 0 0 16px rgba(250,204,21,0.05); }
+.ui-glow:hover { box-shadow: 0 0 28px rgba(250,204,21,0.08); }
+
+/* Logos marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track { display: flex; gap: 12px; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-mask { mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
