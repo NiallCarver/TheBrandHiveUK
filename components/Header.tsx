@@ -14,7 +14,6 @@ export default function Header(){
     <header className={`fixed top-0 left-0 right-0 z-50 ${scrolled ? "header-blur border-b border-border" : ""}`}>
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight text-base sm:text-lg hover:text-accent transition-colors">
-          <span className="md:hidden">BH</span>
           <span className="hidden md:inline">The Brand Hive UK</span>
         </Link>
         <div className="flex items-center gap-6 text-sm">
