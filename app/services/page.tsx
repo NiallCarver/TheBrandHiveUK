@@ -17,8 +17,11 @@ export default function ServicesIndex(){
   return (
     <>
       <Section className="pt-28">
-        <h1 className="h1">Services</h1>
-        <p className="p mt-3 max-w-2xl">Every service is Done‑For‑You and run by specialists. Please book a call to learn more (including pricing).</p>
+        <div className="flex items-center gap-3 flex-wrap">
+          <h1 className="h1">Services</h1>
+          <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 text-accent px-3 py-1 text-xs font-medium tracking-wide uppercase">Currently in maintenance</span>
+        </div>
+        <p className="p mt-3 max-w-2xl">Every service is Done-For-You and run by specialists. Please book a call to learn more (including pricing).</p>
       </Section>
       <Section>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
@@ -34,7 +37,7 @@ export default function ServicesIndex(){
             </Link>
           ))}
         </div>
-        <p className="text-xs text-muted mt-6">Note: Twitter (X) management and Lead Generation are our most in‑demand services by client count.</p>
+        <p className="text-xs text-muted mt-6">Note: Twitter (X) management and Lead Generation are our most in-demand services by client count.</p>
       </Section>
     </>
   );

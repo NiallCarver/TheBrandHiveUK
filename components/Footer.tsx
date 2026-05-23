@@ -21,7 +21,6 @@ export default function Footer() {
             <a className="hover:text-foreground" href="/process">Process</a>
             <a className="hover:text-foreground" href="/about">About</a>
             <a className="hover:text-foreground" href="/contact">Contact</a>
-            <a className="hover:text-foreground" href="/book">Book</a>
             <span className="opacity-40">|</span>
             <a className="hover:text-foreground" href="/legal/terms">Terms</a>
             <a className="hover:text-foreground" href="/legal/privacy">Privacy</a>

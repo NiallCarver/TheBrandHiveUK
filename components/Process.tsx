@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal'
 type Step = { title: string; body: string }
 
 const introTitle = 'The Brand Hive UK Process'
-const introLead = 'Where structure meets storytelling — and every decision is evidence-driven.'
+const introLead = 'Where structure meets storytelling, and every decision is evidence-driven.'
 const introBody = `Every engagement starts with deep research and deliberate intent. We build systems that help founders become recognized industry leaders with measurable influence, authority, and revenue growth.`
 
 const steps: Step[] = [
@@ -21,12 +21,12 @@ const steps: Step[] = [
   {
     title: '3. Narrative & Positioning (Brand Hive Matrix)',
     body:
-      'We translate research into a category-leading story. The Brand Hive Matrix aligns narrative — channel — proof so every message builds belief and trust.',
+      'We translate research into a category-leading story. The Brand Hive Matrix aligns narrative, channel, and proof so every message builds belief and trust.',
   },
   {
-    title: '4. System & Channels (3‑Step Community)',
+    title: '4. System & Channels (3-Step Community)',
     body:
-      'We architect the operating system across LinkedIn, X, PR, and lead gen. Our 3‑Step Community Process (reach → resonance → relationships) compounds demand.',
+      'We architect the operating system across LinkedIn, X, PR, and lead gen. Our 3-Step Community Process (reach → resonance → relationships) compounds demand.',
   },
   {
     title: '5. Specialist Execution',
@@ -34,9 +34,9 @@ const steps: Step[] = [
       'Niche experts across social growth, PR, copy, and paid run their crafts to a global standard. Launch focuses on clarity, proof order, and conversion.',
   },
   {
-    title: '6. Optimize — Authority — Scale',
+    title: '6. Optimize, Authority, Scale',
     body:
-      'We iterate weekly on engagement and conversion signals, expand PR and thought leadership, and report transparently — compounding reach, trust, and revenue.',
+      'We iterate weekly on engagement and conversion signals, expand PR and thought leadership, and report transparently. Reach, trust, and revenue compound.',
   },
 ]
 

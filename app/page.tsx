@@ -6,8 +6,6 @@ import Process from '@/components/Process'
 import Differentiators from '@/components/Differentiators'
 import FAQs from '@/components/FAQs'
 import CTA from '@/components/CTA'
-// import LeadForm from '@/components/LeadForm'
-// import Section from '@/components/Section'
 
 export default function Page() {
   return (

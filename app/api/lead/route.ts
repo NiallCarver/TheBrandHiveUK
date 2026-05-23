@@ -8,6 +8,9 @@ const LeadSchema = z.object({
   message: z.string().min(10, 'Tell us a bit more')
 })
 
+const TO_EMAIL = process.env.LEAD_TO_EMAIL || 'info@thebrandhive.uk'
+const FROM_EMAIL = process.env.LEAD_FROM_EMAIL || 'Brand Hive UK <forms@thebrandhive.uk>'
+
 export async function POST(request: Request) {
   try {
     const json = await request.json()
@@ -23,14 +26,22 @@ export async function POST(request: Request) {
       const { Resend } = await import('resend')
       const resend = new Resend(process.env.RESEND_API_KEY)
       await resend.emails.send({
-        from: 'BrandHive <leads@mail.brandhive.uk>',
-        to: ['hello@brandhive.uk'],
-        subject: `New lead from ${data.name}`,
-        text: `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\n\nMessage:\n${data.message}`
+        from: FROM_EMAIL,
+        to: [TO_EMAIL],
+        reply_to: data.email,
+        subject: `New enquiry from ${data.name}${data.company ? ` (${data.company})` : ''}`,
+        text: [
+          `Name: ${data.name}`,
+          `Email: ${data.email}`,
+          data.company ? `Company: ${data.company}` : null,
+          '',
+          'Message:',
+          data.message
+        ].filter(Boolean).join('\n')
       })
     } else {
-      // Fallback: log to server console
-      console.log('Lead:', data)
+      // Fallback when no API key configured (local dev or pre-launch)
+      console.log('[lead]', data)
     }
 
     return NextResponse.json({ ok: true })
@@ -38,4 +49,3 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: 'Invalid request' }, { status: 400 })
   }
 }
-

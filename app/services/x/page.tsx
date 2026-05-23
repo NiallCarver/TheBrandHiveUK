@@ -4,7 +4,6 @@ import ServiceBenefits from "@/components/sections/ServiceBenefits";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceDeliverables from "@/components/sections/ServiceDeliverables";
 import ServiceCaseStudy from "@/components/sections/ServiceCaseStudy";
-import ServicePricing from "@/components/sections/ServicePricing";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import CTA from "@/components/sections/CTA";
 
@@ -70,18 +69,11 @@ export default function Page(){
           { label: "Inbound trials", value: "+36" },
         ]}
       />
-      <ServicePricing
-        tiers={[
-          { name: "Advisory", price: "from £1,500/mo", blurb: "Guidance, reviews, and systems to scale your output.", points: ["Bi-weekly strategy calls", "Editorial review", "Metrics tracking"]},
-          { name: "Engine Build", price: "from £6,000", blurb: "End-to-end build of your X content system.", points: ["Positioning + pillars", "30-day content pack", "Distribution playbook"]},
-          { name: "Done-With-You", price: "from £3,500/mo", blurb: "Shared execution with tight feedback loops.", points: ["Weekly planning", "Drafting support", "Signal-led iteration"]},
-        ]}
-      />
       <ServiceFAQ
         items={[
-          { q: "How quickly do we see lift?", a: "Most see signal changes within 2–4 weeks and compounding growth by 8–12 weeks." },
+          { q: "How quickly do we see lift?", a: "Most see signal changes within 2-4 weeks and compounding growth by 8-12 weeks." },
           { q: "Do you ghostwrite?", a: "We prioritize authenticity. We can draft with your voice or coach you to ship at quality." },
-          { q: "How is success measured?", a: "Signal quality (replies, saves), profile visits, DM velocity, and booked calls—not just impressions." },
+          { q: "How is success measured?", a: "Signal quality (replies, saves), profile visits, DM velocity, and booked calls, not just impressions." },
         ]}
       />
       <CTA />

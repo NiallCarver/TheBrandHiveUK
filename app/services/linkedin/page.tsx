@@ -4,7 +4,6 @@ import ServiceBenefits from "@/components/sections/ServiceBenefits";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceDeliverables from "@/components/sections/ServiceDeliverables";
 import ServiceCaseStudy from "@/components/sections/ServiceCaseStudy";
-import ServicePricing from "@/components/sections/ServicePricing";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import CTA from "@/components/sections/CTA";
 
@@ -32,7 +31,7 @@ export default function Page(){
         items={[
           { title: "Executive positioning", desc: "Own a category and communicate it with clarity."},
           { title: "Story systems", desc: "Win hearts and minds with credible, repeatable stories."},
-          { title: "Demand paths", desc: "From profile to DM to call—engineered for momentum."},
+          { title: "Demand paths", desc: "From profile to DM to call, engineered for momentum."},
           { title: "Team enablement", desc: "Guides and templates to scale without dilution."},
         ]}
       />
@@ -68,13 +67,6 @@ export default function Page(){
           { label: "Investor intros", value: "+15" },
           { label: "Exec connection rate", value: "+2.3x" },
           { label: "Inbound opps", value: "+19" },
-        ]}
-      />
-      <ServicePricing
-        tiers={[
-          { name: "Advisory", price: "from £1,800/mo", blurb: "C-suite guidance and reviews to scale executive presence.", points: ["Bi-weekly strategy", "Narrative QA", "Metrics tracking"]},
-          { name: "Narrative Build", price: "from £7,500", blurb: "Positioning + story systems built and shipped.", points: ["Narrative stack", "30-day content kit", "Engagement plan"]},
-          { name: "Done-With-You", price: "from £4,500/mo", blurb: "Shared execution with editorial support.", points: ["Weekly planning", "Draft review", "Enablement for team"]},
         ]}
       />
       <ServiceFAQ

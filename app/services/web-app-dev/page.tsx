@@ -4,7 +4,6 @@ import ServiceBenefits from "@/components/sections/ServiceBenefits";
 import ServiceProcess from "@/components/sections/ServiceProcess";
 import ServiceDeliverables from "@/components/sections/ServiceDeliverables";
 import ServiceCaseStudy from "@/components/sections/ServiceCaseStudy";
-import ServicePricing from "@/components/sections/ServicePricing";
 import ServiceFAQ from "@/components/sections/ServiceFAQ";
 import CTA from "@/components/sections/CTA";
 
@@ -32,7 +31,7 @@ export default function Page(){
         items={[
           { title: "Design systems", desc: "Cohesive tokens, components, and patterns for speed and quality."},
           { title: "Performance-first", desc: "Ship fast experiences that feel premium and effortless."},
-          { title: "Conversion flows", desc: "From homepage to signup to success—no dead ends."},
+          { title: "Conversion flows", desc: "From homepage to signup to success. No dead ends."},
           { title: "A11y by default", desc: "Clear contrast, logical hierarchy, keyboard friendly."},
         ]}
       />
@@ -63,25 +62,18 @@ export default function Page(){
       />
       <ServiceCaseStudy
         title="Replatformed and re-architected for speed"
-        summary="Moved to Next.js with a lean design system and optimized for performance and a11y. Experience felt premium—and faster."
+        summary="Moved to Next.js with a lean design system and optimized for performance and a11y. Experience felt premium, and faster."
         stats={[
           { label: "Time to interactive", value: "-40%" },
           { label: "Pages/session", value: "+22%" },
           { label: "Signups", value: "+31%" },
         ]}
       />
-      <ServicePricing
-        tiers={[
-          { name: "Design System", price: "from £6,500", blurb: "Tokens, components, and docs to accelerate delivery.", points: ["Tokens + Tailwind", "Core components", "Usage guidelines"]},
-          { name: "Marketing Site", price: "from £9,500", blurb: "Conversion-first site built on Next.js.", points: ["IA + copy", "Pages + CMS (optional)", "Perf + a11y"]},
-          { name: "App UX", price: "from £12,000", blurb: "Critical flows designed and implemented.", points: ["Flow analysis", "Design + build", "Instrumentation"]},
-        ]}
-      />
       <ServiceFAQ
         items={[
           { q: "Do you use a CMS?", a: "Only when needed. Simple sites run faster and are easier to maintain without one." },
           { q: "Do you handle hosting?", a: "We provide a Docker-ready build. Coolify or Vercel are both supported." },
-          { q: "Can you integrate analytics?", a: "Yes—privacy-friendly analytics with actionable dashboards." },
+          { q: "Can you integrate analytics?", a: "Yes, privacy-friendly analytics with actionable dashboards." },
         ]}
       />
       <CTA />

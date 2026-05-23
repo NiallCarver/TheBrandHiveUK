@@ -29,7 +29,7 @@ export default function Logos() {
       <div className="w-full">
         <Reveal>
           <div className="text-center text-muted text-sm mb-6 px-5">
-            Trusted by the world’s leading 7 - 11 figure brands across; B2B, SAAS, Tech, Info, Finance, Health & Wellness, Entertainment.
+            Trusted by the world&rsquo;s leading 7 to 11 figure brands across B2B, SaaS, Tech, Info, Finance, Health &amp; Wellness, and Entertainment.
           </div>
           <div className="relative overflow-hidden marquee-mask">
             <div className="marquee-track px-3">

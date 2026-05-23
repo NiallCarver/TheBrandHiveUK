@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
   // Left
   {
     quote:
-      "Worked with Niall for over six years—never disappointed. Always successful and profitable campaigns. If you're thinking of working with him, you should.",
+      "Worked with Niall for over six years and never disappointed. Always successful and profitable campaigns. If you're thinking of working with him, you should.",
     name: 'Sam Poyan',
     role: 'Solo Entrepreneur',
     img: '/people/sam-poyan.png',

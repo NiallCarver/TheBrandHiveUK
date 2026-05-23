@@ -17,7 +17,7 @@ export default function Hero() {
             <div className="mt-10 flex items-center justify-center">
               <Button
                 className="px-12 sm:px-14 py-5 text-xl sm:text-2xl shadow-[0_0_34px_rgba(245,197,66,0.16),0_0_70px_rgba(245,197,66,0.12)] hover:shadow-[0_0_50px_rgba(245,197,66,0.22),0_0_90px_rgba(245,197,66,0.16)]"
-                onClick={() => (window.location.href = '/book')}
+                onClick={() => (window.location.href = '/contact')}
               >
                 Book A Call Now
               </Button>

@@ -6,17 +6,18 @@ import Footer from '@/components/Footer'
 import HexBackground from '@/components/HexBackground'
 import SeoOrg from '@/components/SeoOrg'
 import Providers from '@/components/providers/Providers'
+import { siteConfig } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'The Brand Hive UK - Authority That Converts',
   description: 'Modern, premium, tech-forward brand building across X and LinkedIn for founders and CEOs.',
-  metadataBase: new URL('https://brandhive.uk'),
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     title: 'The Brand Hive UK - Authority That Converts',
     description: 'Modern, premium, tech-forward brand building across X and LinkedIn for founders and CEOs.',
-    url: 'https://brandhive.uk',
+    url: siteConfig.url,
     siteName: 'The Brand Hive UK',
     images: ['/og-image.svg'],
     type: 'website'

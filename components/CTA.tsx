@@ -21,7 +21,7 @@ export default function CTA() {
               <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-glow">Ready To Move Faster?</h2>
               <p className="text-muted mt-2">Book a Quick Discovery Now</p>
               <div className="mt-6 flex justify-center">
-                <Button className="px-7 py-3 text-base sm:text-lg" onClick={() => (window.location.href = '/book')}>Book A Quick Discovery Now</Button>
+                <Button className="px-7 py-3 text-base sm:text-lg" onClick={() => (window.location.href = '/contact')}>Book A Quick Discovery Now</Button>
               </div>
             </div>
           </motion.div>

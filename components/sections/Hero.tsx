@@ -14,7 +14,7 @@ export default function Hero(){
         <div className="relative z-10 p-10 md:p-16">
           <motion.div {...(enabled ? { variants:stagger(0.1,0.06), initial:"hidden" as const, animate:"show" as const } : {})} className="max-w-3xl">
             <motion.h1 {...(enabled ? { variants:fadeUp } : {})} className="h1">We position founders as industry leaders and turn attention into revenue.</motion.h1>
-            <motion.p {...(enabled ? { variants:fadeUp } : {})} className="p mt-6">Modern, premium, and tech-forward brand building across X & LinkedIn—engineered for reach, trust, and booked calls.</motion.p>
+            <motion.p {...(enabled ? { variants:fadeUp } : {})} className="p mt-6">Modern, premium, and tech-forward brand building across X and LinkedIn, engineered for reach, trust, and booked calls.</motion.p>
             <motion.div {...(enabled ? { variants:fadeUp } : {})} className="mt-8 flex items-center gap-4">
               <CTAButton href="#book">Book a Call</CTAButton>
               <a className="link" href="#services">Explore Services</a>

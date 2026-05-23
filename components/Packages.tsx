@@ -45,7 +45,7 @@ export default function Packages() {
                   ))}
                 </ul>
                 <div className="mt-6">
-                  <Button className="px-6 py-3 text-base" onClick={() => (window.location.href = '/book')}>Choose {t.name}</Button>
+                  <Button className="px-6 py-3 text-base" onClick={() => (window.location.href = '/contact')}>Choose {t.name}</Button>
                 </div>
               </div>
             </Reveal>

@@ -11,10 +11,10 @@ export default function Founder() {
               Founded by <strong>Niall Carver</strong>, Brand Hive UK was built after six years of testing and refining what actually drives authority and inbound revenue for global founders.
             </p>
             <p className="text-sm text-muted mt-2">
-              Niall established strategies that worked on his own accounts—growing from 0 → 14k followers and $10k revenue in less than three months. From there, he assembled a small team of experts who each manage their own specialist pods under Brand Hive UK.
+              Niall established strategies that worked on his own accounts, growing from 0 to 14k followers and $10k revenue in less than three months. From there, he assembled a small team of experts who each manage their own specialist pods under Brand Hive UK.
             </p>
             <p className="text-sm text-muted mt-2">
-              Today, we work with some of the largest brands across B2B, SaaS, Tech, Finance, Health & Wellness, Entertainment, and PR‑driven categories.
+              Today, we work with some of the largest brands across B2B, SaaS, Tech, Finance, Health & Wellness, Entertainment, and PR-driven categories.
             </p>
           </div>
         </Reveal>

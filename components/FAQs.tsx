@@ -2,19 +2,19 @@ export default function FAQs() {
   const faqs = [
     {
       q: 'What makes your process different from other agencies?',
-      a: "We don't guess; we systemize creativity. Every engagement begins in Amplifyr, our proprietary intelligence layer that builds a detailed onboarding blueprint (strategy, ICP, voice architecture, positioning, and creative direction). From that foundation, our specialists ship high‑impact, conversion‑ready content and campaigns. This system has been proven across our client portfolio since August 1, 2025.",
+      a: "We don't guess; we systemize creativity. Every engagement begins in Amplifyr, our proprietary intelligence layer that builds a detailed onboarding blueprint (strategy, ICP, voice architecture, positioning, and creative direction). From that foundation, our specialists ship high-impact, conversion-ready content and campaigns. This system has been proven across our client portfolio since August 1, 2025.",
     },
     {
       q: 'Are you a full-service shop or specialists?',
-      a: 'We specialize in X (Twitter), LinkedIn, Lead Generation, and PR. Our CEO spent six years hand‑selecting elite platform specialists for every function, so each process is dialed to a world‑class standard. As a result, Brand Hive UK is routinely cited as a benchmark for modern marketing firms.',
+      a: 'We specialize in X (Twitter), LinkedIn, Lead Generation, and PR. Our CEO spent six years hand-selecting elite platform specialists for every function, so each process is dialed to a world-class standard. As a result, Brand Hive UK is routinely cited as a benchmark for modern marketing firms.',
     },
     {
       q: 'What industries do you serve best?',
-      a: 'Technology, finance, insurance, and professional services—categories where credibility, compliance, and message precision directly impact revenue. Our frameworks adapt seamlessly to adjacent B2B markets.',
+      a: 'Technology, finance, insurance, and professional services. Categories where credibility, compliance, and message precision directly impact revenue. Our frameworks adapt seamlessly to adjacent B2B markets.',
     },
     {
       q: 'How do you capture my brand voice accurately?',
-      a: 'Amplifyr maps your communication DNA via our Strategic Messaging Bridge and Archetype Matrix. We ingest approved past content, interviews, and leadership notes to model phrasing, rhythm, and stance—then our editors refine until it reads unmistakably like you.',
+      a: 'Amplifyr maps your communication DNA via our Strategic Messaging Bridge and Archetype Matrix. We ingest approved past content, interviews, and leadership notes to model phrasing, rhythm, and stance. Our editors then refine it until it reads unmistakably like you.',
     },
     {
       q: 'What happens after I sign?',
@@ -22,11 +22,11 @@ export default function FAQs() {
     },
     {
       q: 'How do you ensure originality (and avoid the “AI feel”)?',
-      a: 'We run structural and cadence checks to remove symmetry and templated phrasing, then apply a Human Rewrite Standard: an editor restores natural rhythm, specificity, and narrative intent. Nothing ships without human direction and director‑level sign‑off.',
+      a: 'We run structural and cadence checks to remove symmetry and templated phrasing, then apply a Human Rewrite Standard: an editor restores natural rhythm, specificity, and narrative intent. Nothing ships without human direction and director-level sign-off.',
     },
     {
       q: 'What outcomes should we expect in the first 90 days?',
-      a: 'Early engagement lift (weeks 2–4), clearer positioning and authority signals (weeks 4–8), and compounding inbound (weeks 8–12). Leading indicators include higher save rates, replies, profile visits, qualified DMs, and booked calls.',
+      a: 'Early engagement lift (weeks 2-4), clearer positioning and authority signals (weeks 4-8), and compounding inbound (weeks 8-12). Leading indicators include higher save rates, replies, profile visits, qualified DMs, and booked calls.',
     },
     {
       q: 'Do you work across LinkedIn and X simultaneously?',
@@ -38,7 +38,7 @@ export default function FAQs() {
     },
     {
       q: 'What metrics do you track and report on?',
-      a: 'Channel‑level: impressions, saves, replies, shares, profile clicks. Business‑level: qualified replies/DMs, booked calls, press hits, and deal influence. We highlight narrative learnings (what moved people)—not just vanity counts.',
+      a: 'Channel-level: impressions, saves, replies, shares, profile clicks. Business-level: qualified replies/DMs, booked calls, press hits, and deal influence. We highlight narrative learnings (what moved people), not just vanity counts.',
     },
     {
       q: 'How do revisions and collaboration work?',
@@ -50,10 +50,10 @@ export default function FAQs() {
     },
     {
       q: 'Can you integrate with our internal team or existing agency?',
-      a: 'Seamlessly. Think of Brand Hive UK as your strategic backbone and quality‑control layer: we provide the voice system, editorial standards, and conversion logic your team executes against—or we execute end‑to‑end.',
+      a: 'Seamlessly. Think of Brand Hive UK as your strategic backbone and quality-control layer: we provide the voice system, editorial standards, and conversion logic your team executes against, or we execute end-to-end.',
     },
     {
-      q: 'Do you offer white‑label or partnership programs?',
+      q: 'Do you offer white-label or partnership programs?',
       a: 'Yes. Vetted partners can license our frameworks under NDA, with governance, editorial training, and compliance standards to protect brand integrity.',
     },
   ]
