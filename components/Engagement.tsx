@@ -42,7 +42,7 @@ export default function Engagement(){
     <section aria-label="Engagement & Metrics" className="pt-10 pb-16 -mt-6">
       <div className="container-slim">
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Average Client Metrics as of June 1st 2025</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Monthly Client Metrics as of June 1st 2025</h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {metrics.map((m, i) => (
