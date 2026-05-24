@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Section from "@/components/ui/Section";
+import CTAButton from "@/components/ui/CTAButton";
 
 type Svc = { href: string; title: string; goal: string; clients: number; popular?: boolean };
 
@@ -38,6 +39,9 @@ export default function ServicesIndex(){
           ))}
         </div>
         <p className="text-xs text-muted mt-6">Note: Twitter (X) management and Lead Generation are our most in-demand services by client count.</p>
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <CTAButton href="/contact">Book a call</CTAButton>
+        </div>
       </Section>
     </>
   );

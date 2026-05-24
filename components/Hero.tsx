@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal'
 
 export default function Hero() {
   return (
-    <section className="relative pt-10 sm:pt-16 pb-10 sm:pb-16 min-h-[78vh] flex items-center">
+    <section className="relative pt-24 sm:pt-16 pb-10 sm:pb-16 min-h-[78vh] flex items-center">
       <div className="w-full px-5 sm:px-6 lg:px-8">
         <div className="text-center mx-auto max-w-7xl">
           <Reveal>
@@ -12,7 +12,7 @@ export default function Hero() {
               className="text-[3.25rem] sm:text-[3.875rem] lg:text-7xl font-semibold tracking-[-0.01em] leading-[1.05] text-glow"
               style={{ textWrap: 'balance' }}
             >
-              Positioning Industry Leaders And Helping Them Grow Revenue With X, LinkedIn, And{'\u00A0'}PR
+              Positioning Industry Leaders And Helping Them Increase Revenue With X, LinkedIn, And{'\u00A0'}PR
             </h1>
             <div className="mt-10 flex items-center justify-center">
               <Button
