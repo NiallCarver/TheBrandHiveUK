@@ -66,17 +66,16 @@ export default function ArticlePage({ params }: PageProps) {
 
   const relatedArticles = getRelatedArticles(article)
   const articleUrl = getArticleUrl(article)
-  const authorId = `${siteConfig.url}/#author-niall-carver`
+  const authorId = `${siteConfig.url}/#brand-hive-editorial`
   const publisherId = `${siteConfig.url}/#organization`
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Person',
+        '@type': 'Organization',
         '@id': authorId,
         name: article.author.name,
-        jobTitle: article.author.role,
-        worksFor: { '@id': publisherId },
+        description: article.author.role,
         url: siteConfig.url,
       },
       {
