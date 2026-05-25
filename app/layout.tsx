@@ -19,8 +19,22 @@ export const metadata: Metadata = {
     description: 'Modern, premium, tech-forward brand building across X and LinkedIn for founders and CEOs.',
     url: siteConfig.url,
     siteName: 'The Brand Hive UK',
-    images: ['/og-image.svg'],
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1600,
+        height: 912,
+        type: 'image/png',
+        alt: 'The Brand Hive UK - Strategy, Content, Lead Generation'
+      }
+    ],
     type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Brand Hive UK - Authority That Converts',
+    description: 'Modern, premium, tech-forward brand building across X and LinkedIn for founders and CEOs.',
+    images: ['/og-image.png']
   },
   icons: { icon: '/logos/brand-logo.png' }
 }

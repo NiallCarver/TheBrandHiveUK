@@ -4,7 +4,7 @@ export const siteConfig = {
   name: 'The Brand Hive UK',
   legalName: 'Brand Hive UK',
   url: siteUrl,
-  ogImage: '/og-image.svg',
+  ogImage: '/og-image.png',
   logo: '/logos/The_Brand_Hive_UK_Transparent.png',
   email: 'info@thebrandhive.uk',
 }
